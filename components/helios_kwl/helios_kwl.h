@@ -9,7 +9,7 @@
 #include "esphome/components/switch/switch.h"
 #include "esphome/components/uart/uart.h"
 #include "esphome/core/component.h"
-#include "esphome/core/helpers.h"
+#include "esphome/core/alloc_helpers.h"
 
 namespace esphome {
 namespace helios_kwl_component {
