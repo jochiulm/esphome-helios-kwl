@@ -354,11 +354,11 @@ optional<uint8_t> HeliosKwlComponent::poll_register(uint8_t address) {
       if (array[1] == MAINBOARD && array[2] == ADDRESS && array[3] == address) {
         return array[4];
       } else {
-        const auto hex = format_hex_pretty(array.data(), array.size());
+        const auto hex = format_hex_pretty_to(array.data(), array.size());
         ESP_LOGE(TAG, "Wrong response from mainboard: %s", hex.c_str());
       }
     } else {
-      const auto hex = format_hex_pretty(array.data(), array.size());
+      const auto hex = format_hex_pretty_to(array.data(), array.size());
       ESP_LOGE(TAG, "Bad checksum for response: %s", hex.c_str());
     }
   }
